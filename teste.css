@@ -1,12 +1,12 @@
-/* ===============================
+/* =============================== 
    🎨 Paleta de cores e variáveis
 ================================== */
 :root {
-  --bg: #F7FBFA;
-  --card: #FFFFFF;
-  --muted: #9AA6A3;
-  --accent: #5BD2B7;     /* Mint */
-  --accent-2: #7B61FF;   /* Lilás */
+  --bg: #F4F1EC;         /* Bege claro */
+  --card: #FFFFFF;       /* Branco */
+  --muted: #2E2E2E;      /* Cinza escuro */
+  --accent: #1F3A5F;     /* Azul petróleo */
+  --accent-2: #C9A86A;   /* Dourado queimado */
   --cta: linear-gradient(135deg, var(--accent), var(--accent-2));
   --glass: rgba(255, 255, 255, 0.6);
   --shadow: 0 10px 30px rgba(18, 23, 21, 0.08);
@@ -19,6 +19,7 @@
 * {
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
 }
@@ -26,7 +27,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
-  color: #123;
+  color: var(--muted);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -72,6 +73,7 @@ header {
   height: 44px;
   border-radius: 10px;
   background: var(--cta);
+    background-image: url('./img/hotel.png');
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +114,7 @@ nav a {
 .btn-primary {
   background: var(--cta);
   color: white;
-  box-shadow: 0 6px 18px rgba(91,210,183,0.18);
+  box-shadow: 0 6px 18px rgba(31,58,95,0.18);
 }
 
 /* ===============================
@@ -122,8 +124,8 @@ nav a {
   margin-top: 6px;
   padding: 56px 0 80px;
   background:
-    radial-gradient(600px 160px at 10% 10%, rgba(123,97,255,0.08), transparent 10%),
-    radial-gradient(700px 180px at 95% 5%, rgba(91,210,183,0.06), transparent 10%);
+    radial-gradient(600px 160px at 10% 10%, rgba(31,58,95,0.08), transparent 10%),
+    radial-gradient(700px 180px at 95% 5%, rgba(201,168,106,0.06), transparent 10%);
   clip-path: polygon(0 0,100% 0,100% 89%,0 100%);
 }
 .hero-grid {
@@ -135,7 +137,7 @@ nav a {
 .hero-title {
   font-size: 34px;
   font-weight: 700;
-  color: #0f2b2a;
+  color: var(--accent);
   margin-bottom: 14px;
 }
 .hero-sub {
@@ -357,7 +359,7 @@ footer {
    ✨ Estética extra para inputs
 ================================== */
 .search select:focus, .search input:focus {
-  outline: 2px solid rgba(123,97,255,0.14);
+  outline: 2px solid rgba(31,58,95,0.14);
   outline-offset: 2px;
   border-radius: 8px;
 }
@@ -439,7 +441,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background: var(--accent-2, #f5f5f5);
+    background: var(--accent-2);
     border-bottom: 1px solid #ddd;
 }
 
@@ -461,3 +463,110 @@ footer {
 .modal-body p {
     margin-bottom: 10px;
 }
+/* ===== VANTAGENS ===== */
+.vantagens {
+  background: #f7f7f7;
+  padding: 60px 0;
+}
+
+.vantagens-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.vantagens-img {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.vantagens-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.vantagens-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.vantagens-subtitulo {
+  color: var(--accent-2);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.vantagens-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.vantagens-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+}
+
+/* ===== COMO FUNCIONA ===== */
+.como-funciona {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.como-subtitulo {
+  color: var(--accent-2);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.como-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.como-passos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.passo {
+  flex: 1;
+  min-width: 220px;
+  max-width: 250px;
+}
+
+.numero {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--accent-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.passo h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.passo p {
+  font-size: 14px;
+  color: #666;
+}
+
